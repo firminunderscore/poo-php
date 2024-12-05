@@ -11,13 +11,8 @@
 
 declare(strict_types=1);
 
-namespace App\Domain\MatchMaker\Player;
+namespace App\Domain\Exceptions;
 
-interface PlayerInterface
+class NotFoundPlayersException extends \RuntimeException
 {
-    public function updateRatioAgainst(self $player, int $result): void;
-
-    public function getName(): string;
-
-    public function getRatio(): ?float;
 }
